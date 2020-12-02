@@ -58,4 +58,5 @@ for i,datum in enumerate(preds):
     createBoundingBox(x, pred_bb, (0,0,255)) ## Red is prediction
     font = cv2.FONT_HERSHEY_SIMPLEX
     cv2.putText(x, reference, (10,40), font, 1, (0, 0, 255), 3)
-    showImage(x)
+    #showImage(x)
+    cv2.imwrite(f"{image}_{ref_id}.jpg", x)
